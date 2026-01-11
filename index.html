@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nightgen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Google+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <section class="viewport">
+            <div class="viewport-dots"></div>
+            <div class="canvas-container">
+                <canvas id="preview-canvas"></canvas>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <header>
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3C10.45 3 8.95 3.3 7.58 3.86C10.22 4.96 12 7.55 12 10.5C12 13.45 10.22 16.04 7.58 17.14C8.95 17.7 10.45 18 12 18C16.41 18 20 14.41 20 10C20 5.59 16.41 2 12 2V3Z" fill="currentColor"/></svg>
+                    </div>
+                    <div>
+                        <h1 class="brand-name">nightgen</h1>
+                        <p class="brand-sub">✧｡٩(ˊᗜˋ )و✧*｡</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="controls-stack">
+                <div class="control-group">
+                    <label class="label-caps">device</label>
+                    <div class="toggle-group">
+                        <button id="btn-pc" class="toggle-btn active">desktop</button>
+                        <button id="btn-phone" class="toggle-btn">mobile</button>
+                    </div>
+                    <select id="select-resolution" class="m3-select"></select>
+                </div>
+
+                <div class="control-group">
+                    <label class="label-caps">colors</label>
+                    <div class="color-row">
+                        <div class="color-item">
+                            <div class="color-swatch"><input type="color" id="color-primary" value="#4A90E2"></div>
+                            <span>horizon</span>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-swatch"><input type="color" id="color-secondary" value="#0B0D17"></div>
+                            <span>void</span>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-swatch"><input type="color" id="color-extra" value="#FFFFFF"></div>
+                            <span>stars</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="slider-header">
+                        <label class="label-caps">star brightness</label>
+                        <span class="slider-value" id="val-1">50%</span>
+                    </div>
+                    <input type="range" id="slider-1" min="0.2" max="4" step="0.1" value="1.5" class="m3-slider">
+
+                    <div class="slider-header" style="margin-top: 16px;">
+                        <label class="label-caps">mountain relief</label>
+                        <span class="slider-value" id="val-2">60%</span>
+                    </div>
+                    <input type="range" id="slider-2" min="0.3" max="2.5" step="0.1" value="1.2" class="m3-slider">
+                </div>
+
+                <div class="actions">
+                    <button id="btn-regenerate" class="m3-btn m3-btn-primary">re-generate</button>
+                    <button id="btn-download" class="m3-btn m3-btn-outlined">download</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
