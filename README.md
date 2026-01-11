@@ -1,0 +1,6 @@
+### nightgen
+nightgen - its just vibecoded site for generating wallpapers with mountains.
+
+![alt text](screenshots/image.png)
+
+![alt text](screenshots/image-1.png)
